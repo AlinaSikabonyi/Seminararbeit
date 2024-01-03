@@ -23,9 +23,9 @@ t_span = (0, 50)
 sol = solve_ivp(ODEsystem, t_span, x0, args=(S, phi, A, alpha)) #t_eval=np.linspace(0, 50, 1000)
 
 # Plot both x(t) and y(t) in the same plot
-plt.plot(sol.t, sol.y[0], label='x(t)') #y[0] nach der ersten variable in diesem fall x also HP
-plt.plot(sol.t, sol.y[1], label='y(t)') #y[1] nach der zweiten variable in diesem fall y also TH
+plt.plot(sol.t, sol.y[0], label='x(t)') #y[0] nach der ersten variable in diesem fall x also TSH 
+plt.plot(sol.t, sol.y[1], label='y(t)') #y[1] nach der zweiten variable in diesem fall y also FT4 
 plt.xlabel('Time')
 plt.ylabel('Values')
-plt.legend(['x', 'y'], shadow=True)
+plt.legend(['TSH', 'FT$'], shadow=True)
 plt.show()
