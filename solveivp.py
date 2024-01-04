@@ -22,7 +22,7 @@ t_span = (0, 50)
 #solver zumgenaurenauswerten entweder t-eval oder dense-out = true 
 sol = solve_ivp(ODEsystem, t_span, x0, args=(S, phi, A, alpha)) #t_eval=np.linspace(0, 50, 1000)
 
-# Plot both x(t) and y(t) in the same plot
+# Plot x(t) and y(t) im selben plot
 plt.plot(sol.t, sol.y[0], label='x(t)') #y[0] nach der ersten variable in diesem fall x also TSH 
 plt.plot(sol.t, sol.y[1], label='y(t)') #y[1] nach der zweiten variable in diesem fall y also FT4 
 plt.xlabel('Time')
