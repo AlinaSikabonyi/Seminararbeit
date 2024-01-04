@@ -1,22 +1,20 @@
-import numpy as np
-from scipy.integrate import solve_ivp
-import matplotlib.pyplot as plt
 from parameters import *
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.optimize import minimize_scalar
 
-# HPf function definition
-def HPf(t, z, alpha, A, S, phi):
-    x, y = z
-    dx_dt = S / np.exp(phi * y) - x
-    dy_dt = A - (A / np.exp(alpha * x)) - y
-    return [dx_dt, dy_dt]
+def T(x, A, alpha):
+    return A - (A / np.exp(alpha * x))
 
-sol = solve_ivp(HPf, [0, 50], [0, 0], args=(alpha, A, S, phi), dense_output=True)
+def curvT(x, A, alpha):
+    y = (-A * (alpha ** 2) * (np.exp(alpha * x))) / ((1 + A ** 2 * alpha ** 2 * np.exp(-2 * alpha * x)) ** (3 / 2))
+    return y
 
-t = np.linspace(0, 50, 300)
-z = sol.sol(t)
 
-plt.plot(t, z.T)
-plt.xlabel('t')
-plt.legend(['x', 'y'], shadow=True)
-plt.title('Lotka-Volterra System')
+plt.plot(x_val, y_val, label='T(x)')
+
+#plt.scatter(max_x, T(max_x, A, alpha), color='red')
+plt.xlabel('TSH (mU/L)')
+plt.ylabel('FT4 (pmol/L)')
+plt.legend()
 plt.show()
