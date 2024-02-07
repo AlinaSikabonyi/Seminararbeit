@@ -13,8 +13,12 @@ Den set point, den ich im Plot hinausbekomme ist jedoch nicht geanz genu derselb
 HPfunction - Code:
 Hier wieder Hpfunction mit krümmung, leider ohne set point. Es wird mir gesagt wenn ich den set point also die nullstelle der ableitung von der Krümmung ausrechne, dass die ableitung der Krümmung nicht vorzeichen wechselt, was aber in der Grafik offensichtlich schon so ist. Wenn der computer aber denkt es ändert sich das vorzeichen nicht dann funktioniert das bisektionsverfahren nicht und findet eben keine Nullstelle. GRund: viellleicht weil alles zu ungenau berechnet wird? 
 
-solveivp:
+solveivp - Code:
 sollte eigentlich passen,der Gupf der einen Kirve schaut ein wenig extrem aus aber die Anfangswerte stimmen nun.
 
-gainfactor-analysis:
-schaut derzeit so aus wie in masterarbeit, alles klappt gut.
+gainfactor - Code:
+schaut derzeit so aus wie in masterarbeit, alles klappt gut. ist nur der plot wie die gainfactor funktion ausschaut
+
+gainfactorplot - Code:
+hier habe ich den set point anahnd von der gainfactoranalysis geplottet. hier passt eigentlich auch alles, die werte die durch den Code hinauskommen sind fast diesselben wie die aus der arbeit. (kann man genauer machen?)
+
