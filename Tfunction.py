@@ -29,7 +29,7 @@ def dercurvT(x, A, alpha):
 x_val = np.linspace(0, 30, 300)
 
 #finde schnittpunkt von dercurvT und x-achse mittels diesem befehl
-crossings = np.where(np.diff(np.sign(dercurvT(x_val, A, alpha))) != 0)[0] #schaut sich die unterschiedlichen vorzeichen an
+crossings = np.where(np.diff(np.sign(dercurvT(x_val, A, alpha))) != 0)[0] #schaut sich die unterschiedlichen vorzeichen an, np.diff schaut änderung der signum funktion an
 intersection_x = x_val[crossings[0]] #stellt den x wert fest wo der schnitt liegt und nennt ihn intersepction
 
 fig, ax1 = plt.subplots()
