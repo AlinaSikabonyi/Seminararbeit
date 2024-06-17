@@ -23,6 +23,5 @@ plt.plot(x_val, inverse_T(x_val, A, alpha), color = 'red')
 plt.plot(x_val[index], HP_values[index], 'ro')
 plt.ylim(0,8)
 plt.show()
-#einmal formel und eimal was im Code rauskommt
 print('set point is', HP_values[index])
-print(1/alpha)
+print( A * (1 - (np.exp(-1))) , 1/alpha)
